@@ -1,10 +1,12 @@
 package Lab4;
 
-public class Person {
+// Custom class for demonstration
+class Person {
     String name;
     int age;
     double salary;
     String department;
+
     // Constructor
     public Person(String name, int age, double salary, String department) {
         this.name = name;
@@ -12,6 +14,7 @@ public class Person {
         this.salary = salary;
         this.department = department;
     }
+
     // toString method for displaying Person objects
     @Override
     public String toString() {

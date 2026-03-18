@@ -1,8 +1,10 @@
+import java.util.Arrays;
+
 public class TempTracker {
     public static void main(String[] args) {
         // Array to store temperatures for 7 days
         double[] temperatures = {72.5, 75.0, 68.0, 70.2, 73.8, 77.0, 71.5};
-
+        Arrays.sort(temperatures);
         // Calculate and print the average temperature
         double averageTemp = calculateAverage(temperatures);
         System.out.println("Average Temperature: " + averageTemp);
@@ -39,19 +41,19 @@ public class TempTracker {
                 hottest = i;
             }
         }
-        return hottest;
+        return arr[hottest];
     }
 
 
     // Find the coldest temperature
     public static double findColdest(double[] arr) {
         int coldest = 0;
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 1; i < arr.length; i++) {
             if (arr[i] < arr[coldest]) {
                 coldest = i;
             }
         }
-        return coldest;
+        return arr[coldest];
 
 
     }
